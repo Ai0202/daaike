@@ -3,5 +3,5 @@ import '@testing-library/jest-dom/extend-expect'
 import Home from '../pages/index'
 it('Should render hello text', () => {
   render(<Home />)
-  expect(screen.getByText('daaike')).toBeInTheDocument()
+  expect(screen.getByText('ますもとさんこんばんは')).toBeInTheDocument()
 })
