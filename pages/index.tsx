@@ -1,8 +1,10 @@
+import Layout from '../components/Layout'
+
 const Home: React.FC = () => {
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen font-mono">
-      ますもとさんこんばんは
-    </div>
+    <Layout title="トップページ">
+      <p className="text-4xl">トップページ</p>
+    </Layout>
   )
 }
 export default Home
