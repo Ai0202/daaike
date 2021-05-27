@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout'
-
 const PortfolioCreate: React.FC = () => {
   return (
     <Layout title="ポートフォリオ投稿ページ">
