@@ -1,13 +1,12 @@
 import Image from 'next/image'
+import SectionTitle from '@/components/atoms/SectionTitle'
 
 const Recommendation: React.FC = () => {
   return (
-    <section className="p-8 text-neutral-text">
-      <h1 className="text-2xl border-b-4 border-primary-main border-opacity-20">
-        推薦の言葉
-      </h1>
+    <section className="w-full mt-8 px-8 text-neutral-text">
+      <SectionTitle title="推薦の言葉" />
       <section className="py-8">
-        <div className="p-4 flex flex-col md:flex-row flex-auto shadow-lg">
+        <div className="p-4 flex flex-col md:flex-row flex-auto shadow-xl rounded-lg">
           <div className="md:w-1/2 text-center">
             <Image
               width={300}
@@ -29,7 +28,7 @@ const Recommendation: React.FC = () => {
             <p className="mt-4 self-end text-sm text-opacity-70">きりんさん</p>
           </div>
         </div>
-        <div className="mt-8 p-4 flex flex-col md:flex-row-reverse flex-auto shadow-lg">
+        <div className="mt-8 p-4 flex flex-col md:flex-row-reverse flex-auto shadow-xl rounded-lg">
           <div className="md:w-1/2 md:ml-8 text-center">
             <Image
               width={300}
