@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        'hero-background': "url('/images/hero_background.jpg')",
-        avator: "url('/images/avator.jpg')",
+        'hero-background': "url('/images/hero_background.jpeg')",
+        avator: "url('/images/avator.jpeg')",
       }),
     },
     colors: {
