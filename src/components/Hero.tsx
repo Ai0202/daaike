@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Hero: React.FC = () => {
   return (
     <section className="w-screen px-8 py-8">
-      <div className="relative bg-cover bg-bottom bg-no-repeat bg-hero-background h-72 md:h-96">
+      <div className="relative bg-cover bg-bottom bg-no-repeat bg-gradient-to-tr from-primary-main to-primary-valiant h-72 md:h-96">
         <div
           className="
           h-48
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
           <Image
             width={424}
             height={424}
-            src="/images/avator.jpg"
+            src="/images/avator.jpeg"
             objectFit="cover"
           />
         </div>

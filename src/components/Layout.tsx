@@ -13,11 +13,11 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
         <title>{title}</title>
       </Head>
       <header>
-        <nav className="bg-gray-800 w-screen">
+        <nav className="bg-neutral w-screen">
           <div className="flex justify-between items-center px-8 h-14">
             <div>
               <Link href="/">
-                <a data-testid="home-nav" className="px-3 py-2 rounded">
+                <a data-testid="home-nav" className="px-3 py-2">
                   <Image width={60} height={60} src="/images/logo.png" />
                 </a>
               </Link>
@@ -26,7 +26,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
               <Link href="/blog">
                 <a
                   data-testid="blog-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="text-primary-main hover:text-primary-variant px-3 py-2"
                 >
                   Blog
                 </a>
@@ -34,7 +34,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
               <Link href="/portfolio">
                 <a
                   data-testid="task-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+                  className="text-primary-main hover:text-primary-variant px-3 py-2"
                 >
                   Portfolio
                 </a>
