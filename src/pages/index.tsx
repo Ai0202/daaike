@@ -1,9 +1,10 @@
+import Hero from '@/components/Hero'
 import Layout from '@/components/Layout'
 
 const Home: React.FC = () => {
   return (
     <Layout title="トップページ">
-      <p className="text-4xl">トップページ</p>
+      <Hero />
     </Layout>
   )
 }

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Footer from './Footer'
+import Image from 'next/image'
 
 interface TITLE {
   title: string
@@ -13,16 +14,15 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
       </Head>
       <header>
         <nav className="bg-gray-800 w-screen">
-          <div className="flex items-center pl-8 h-14">
-            <div className="flex space-x-4">
+          <div className="flex justify-between items-center px-8 h-14">
+            <div>
               <Link href="/">
-                <a
-                  data-testid="home-nav"
-                  className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
-                >
-                  Home
+                <a data-testid="home-nav" className="px-3 py-2 rounded">
+                  <Image width={60} height={60} src="/images/logo.png" />
                 </a>
               </Link>
+            </div>
+            <div className="flex space-x-4">
               <Link href="/blog">
                 <a
                   data-testid="blog-nav"
