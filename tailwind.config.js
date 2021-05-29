@@ -22,7 +22,10 @@ module.exports = {
         variant: '#ffff72',
         text: '#000',
       },
-      neutral: '#fff',
+      neutral: {
+        main: '#fff',
+        text: '#565863',
+      },
       error: colors.red[500],
     },
   },

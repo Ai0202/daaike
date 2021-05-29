@@ -13,7 +13,7 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
         <title>{title}</title>
       </Head>
       <header>
-        <nav className="bg-neutral w-screen">
+        <nav className="bg-neutral-main w-screen">
           <div className="flex justify-between items-center px-8 h-14">
             <div>
               <Link href="/">
