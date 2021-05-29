@@ -6,11 +6,14 @@ const Hero: React.FC = () => {
       <div className="relative bg-cover bg-bottom bg-no-repeat bg-gradient-to-tr from-primary-main to-primary-valiant h-72 md:h-96">
         <div
           className="
-          h-48
-          w-48
+          h-32
+          w-32
+          md:h-48
+          md:w-48
           absolute
+          right-12
           -bottom-12
-          right-24
+          md:right-24
           rounded-full
           overflow-hidden
           shadow-lg"
