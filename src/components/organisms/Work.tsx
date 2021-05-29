@@ -11,13 +11,13 @@ type Props = {
 
 const Work: React.FC<Props> = ({ id, image, name, info, description }) => {
   return (
-    <div className="shadow-2xl rounded-t-3xl overflow-hidden">
+    <div className="h-80 md:h-96 shadow-2xl rounded-t-3xl overflow-hidden">
       <Link href={`/portfolio/${id}`}>
         <a>
           <div>
             <Image
-              height={552}
-              width={828}
+              height={415}
+              width={621}
               src={image}
               objectFit="contain"
               className="cursor-pointer hover:opacity-70"

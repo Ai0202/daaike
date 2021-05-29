@@ -24,7 +24,7 @@ const Works: React.FC = () => {
               image="/images/recommendation/cat.jpeg"
               name="Great Web service"
               info="Next.js | Laravel | AWS"
-              description="This is my Great service"
+              description="This is my Great service This is my Great service This is my Great service This is my Great service This is my Great service"
             />
           </li>
           <li className="p-4 w-full sm:w-1/2 md:w-1/3">
