@@ -8,9 +8,9 @@ const Profile: React.FC = () => {
         <p>Name: daaike</p>
         <p className="mt-4">
           <span className="text-primary-main font-bold">Ukulele player</span>
-          (someday) / Web Developer
+          (someday) | Web Developer
         </p>
-        <p className="mt-2">comming soon.</p>
+        <p className="mt-2">Bio: comming soon.</p>
       </section>
     </section>
   )
