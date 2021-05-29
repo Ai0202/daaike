@@ -9,8 +9,8 @@ const Home: React.FC = () => {
     <Layout title="トップページ">
       <Hero />
       <Profile />
-      <Recommendation />
       <Works />
+      <Recommendation />
     </Layout>
   )
 }
