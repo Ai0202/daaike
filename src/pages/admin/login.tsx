@@ -1,10 +1,19 @@
 import { withAuthUser, AuthAction } from 'next-firebase-auth'
 import Layout from '@/components/Layout'
 import { useForm } from 'react-hook-form'
+import { Login as LoginProps } from '@/types'
+import firebase from 'firebase/app'
 
 const Login: React.FC = () => {
   const { register, handleSubmit } = useForm()
-  const onSubmit = (data) => alert(JSON.stringify(data))
+
+  const onSubmit = async ({ email, password }: LoginProps): Promise<void> => {
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, password)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <Layout title="ログイン">
