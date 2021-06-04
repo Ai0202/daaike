@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout'
+import Layout from '@/components/Layout/Default'
 import { useForm } from 'react-hook-form'
 
 const Signup: React.FC = () => {

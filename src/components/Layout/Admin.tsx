@@ -6,7 +6,7 @@ import Image from 'next/image'
 interface TITLE {
   title: string
 }
-const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
+const AdminLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen font-mono">
       <Head>
@@ -54,4 +54,4 @@ const Layout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
     </div>
   )
 }
-export default Layout
+export default AdminLayout

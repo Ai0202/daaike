@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout'
+import Layout from '@/components/Layout/Default'
 import Hero from '@/components/Hero'
 import Profile from '@/components/Profile'
 import Recommendation from '@/components/Recommendation'

@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout'
+import Layout from '@/components/Layout/Default'
 
 const Portfolio: React.FC = () => {
   return (
