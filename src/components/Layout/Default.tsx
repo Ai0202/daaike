@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Footer from './Footer'
 import Image from 'next/image'
+import { url } from '@/constants/url'
 
 interface TITLE {
   title: string
@@ -27,7 +28,7 @@ const DefaultLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
               </Link>
             </div>
             <div className="flex space-x-4">
-              <Link href="/blog">
+              <Link href={url.blog}>
                 <a
                   data-testid="blog-nav"
                   className="text-primary-main hover:text-primary-variant px-3 py-2"
@@ -35,7 +36,7 @@ const DefaultLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
                   Blog
                 </a>
               </Link>
-              <Link href="/portfolio">
+              <Link href={url.portfolio}>
                 <a
                   data-testid="task-nav"
                   className="text-primary-main hover:text-primary-variant px-3 py-2"

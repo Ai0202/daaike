@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useAuthUser } from 'next-firebase-auth'
+import { adminUrl as url } from '@/constants/url'
 
 import Footer from './Footer'
 import Image from 'next/image'
@@ -30,12 +31,28 @@ const AdminLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
               </Link>
             </div>
             <div className="flex space-x-4">
+              <Link href={url.blog}>
+                <a
+                  data-testid="blog-nav"
+                  className="text-primary-main hover:text-primary-variant px-3 py-2"
+                >
+                  Blog
+                </a>
+              </Link>
+              <Link href={url.createBlog}>
+                <a
+                  data-testid="blog-nav"
+                  className="text-primary-main hover:text-primary-variant px-3 py-2"
+                >
+                  post Blog
+                </a>
+              </Link>
               <div>
                 <button
                   className="text-primary-main hover:text-primary-variant px-3 py-2"
                   onClick={AuthUser.signOut}
                 >
-                  サインアウト
+                  Sign out
                 </button>
               </div>
             </div>
