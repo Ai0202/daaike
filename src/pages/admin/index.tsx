@@ -8,7 +8,6 @@ const Dashboard: React.FC = () => {
     <Layout title="管理者ダッシュボード">
       <div>管理者ダッシュボード</div>
       <div>{AuthUser.email}</div>
-      <button onClick={AuthUser.signOut}>サインアウト</button>
     </Layout>
   )
 }

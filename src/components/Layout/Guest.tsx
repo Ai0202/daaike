@@ -1,15 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useAuthUser } from 'next-firebase-auth'
-
-import Footer from './Footer'
 import Image from 'next/image'
 
 interface TITLE {
   title: string
 }
-const AdminLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
-  const AuthUser = useAuthUser()
+const GuestLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen font-mono">
       <Head>
@@ -29,24 +25,13 @@ const AdminLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
                 </a>
               </Link>
             </div>
-            <div className="flex space-x-4">
-              <div>
-                <button
-                  className="text-primary-main hover:text-primary-variant px-3 py-2"
-                  onClick={AuthUser.signOut}
-                >
-                  サインアウト
-                </button>
-              </div>
-            </div>
           </div>
         </nav>
       </header>
       <main className="flex flex-1 justify-center items-center flex-col w-screen mt-14">
         {children}
       </main>
-      <Footer />
     </div>
   )
 }
-export default AdminLayout
+export default GuestLayout

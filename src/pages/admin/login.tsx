@@ -1,5 +1,5 @@
 import { withAuthUser, AuthAction } from 'next-firebase-auth'
-import Layout from '@/components/Layout/Default'
+import Layout from '@/components/Layout/Guest'
 import { useForm } from 'react-hook-form'
 import { Login as LoginProps } from '@/types'
 import firebase from 'firebase/app'
