@@ -6,7 +6,7 @@ export const url = {
 export const adminUrl = {
   top: '/admin',
   blog: '/admin/blog',
-  createBlog: '/blog/create',
+  createBlog: '/admin/blog/create',
   portfolio: '/admin/portfolio',
   createPortfolit: '/admin/portfolio/create',
 }
