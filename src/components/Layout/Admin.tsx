@@ -1,10 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import DropdownMenu from '@/components/molecules/DropdownMenu'
 import { useAuthUser } from 'next-firebase-auth'
 import { adminUrl as url } from '@/constants/url'
-import MenuItem from '@material-ui/core/MenuItem'
-import Menu from '@material-ui/core/Menu'
 
 import Footer from './Footer'
 import Image from 'next/image'
@@ -14,16 +13,6 @@ interface TITLE {
 }
 const AdminLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
   const AuthUser = useAuthUser()
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
-
-  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
 
   return (
     <div className="flex justify-center items-center flex-col min-h-screen font-mono">
@@ -45,39 +34,14 @@ const AdminLayout: React.FC<TITLE> = ({ children, title = 'Nextjs' }) => {
               </Link>
             </div>
             <div className="flex space-x-4">
-              <button
-                data-testid="blog-nav"
-                className="text-primary-main hover:text-primary-variant px-3 py-2"
-                onClick={handleMenu}
-              >
-                Blog
-              </button>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={open}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>
-                  <Link href={url.blog}>
-                    <a>List</a>
-                  </Link>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <Link href={url.createBlog}>
-                    <a>create</a>
-                  </Link>
-                </MenuItem>
-              </Menu>
+              <DropdownMenu
+                buttonText="Portfolio"
+                urls={[url.portfolio, url.createPortfolit]}
+              />
+              <DropdownMenu
+                buttonText="Blog"
+                urls={[url.blog, url.createBlog]}
+              />
               <div>
                 <button
                   className="text-primary-main hover:text-primary-variant px-3 py-2"
